@@ -1,0 +1,16 @@
+﻿import datetime
+
+#COMPOSIÇÃO:Existência de um histórico depende da existência de uma Conta;
+
+class Historico:
+
+    def __init__(self):
+        self.data_abertura = datetime.datetime.today()
+        self.transacoes = []
+
+    def imprime(self):
+        print("data abertura: {}".format(self.data_abertura))
+        print("transações: ")
+        for t in self.transacoes:
+            print("-", t)
+       
